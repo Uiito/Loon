@@ -1,3 +1,0 @@
-http-request https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) script-path=https://github.com/NobyDa/Script/blob/master/Surge/JS/YouTube.js
-
-hostname = *.googlevideo.com
