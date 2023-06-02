@@ -1,0 +1,81 @@
+#!name=应用软件Vip
+#!desc=软件Vip破解
+#!author=
+#!homepage=https://github.com/Moli-X/Resources/edit/main/Loon/Collection.plugin
+#!icon=https://raw.githubusercontent.com/Moli-X/Resources/main/Icon/Image/Collection.png
+
+[URL Rewrite]
+# ✅彩云天气广告
+^https:\/\/ad\.caiyunapp\.com - reject
+# ✅酷我音乐_AdBlock
+^https?:\/\/rich\.kuwo\.cn\/AdService\/kaiping\/.+ - reject
+^https?:\/\/.+\.kwcdn\.kuwo\.cn\/star\/upload\/.+ - reject
+^https?:\/\/mobilead\.kuwo\.cn\/EcomResourceServer\/Ad - reject
+https?:\/\/audiobookpay\.kuwo\.cn/a\.p\?op=get_advertright - reject-dict
+https?:\/\/omp-audiobookpay\.lrts\.me\/a\.p\?op=get_advertright - reject-dict
+^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?uid\=\d+ header http://musicpay.kuwo.cn/music.pay?uid=2
+
+
+[Script]
+# ✅ Spotify
+http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/spotify-proto.js
+# ✅ 酷我音乐
+http-response ^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/(a\.p|music\.pay|(vip\/(v2|enc)\/(theme|user\/vip))|(EcomResource|(Mobile)?Ad)Serv(er|ice)).* script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/kw.js
+# ✅ WPS
+http-response ^https:\/\/(vas|account)\.wps\.cn\/(query\/api\/v\d\/list_purchase_info|api\/users\/\d+\/overview) script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/WPSOffice.js
+# ✅ Nicegram
+http-request ^https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\w+$ script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/Nicegram.js
+# ✅ 彩云天气
+http-response ^http[s]?:\/\/biz\.(caiyunapp|cyapi)\.(com|cn)\/v2\/user.*$ script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/cytq.js
+# ✅ Picsew
+http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/Picsew.js
+# ✅ 有道词典
+http-response ^https:\/\/dict\.youdao\.com\/vip\/user\/status script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/wyydcd.js
+# ✅ 美图秀秀
+http-response ^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home) script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/mtxx.js
+# ✅ 1Blocker
+http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/) script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/1BlockerProCrack.js
+# ✅ 百度网盘(倍速)
+http-response ^https?:\/\/pan\.baidu\.com\/(youai\/(user\/.+\/getminfo|membership\/.+\/adswitch)|(rest\/.+\/membership\/user|act\/.+\/(bchannel|welfare)\/list|api\/usercfg)) script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/bdcloud.js
+# ✅ 扫描全能王
+http-response ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/smqnw.js
+# ✅ 京东比价
+http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/JDprice.js
+# ✅ Emby
+http-request ^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/emby.js
+# ✅ 阿里云盘
+http-response ^https?:\/\/(api|member)\.aliyundrive\.com script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/alidrive.js
+# ✅ 轻颜相机
+http-response ^https:\/\/commerce-api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info? script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/qyxj.js
+# ✅ Xmind
+http-response ^https:\/\/www\.xmind\.cn\/_res\/devices script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/xmind.js
+# ✅ 无痕去水印
+http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/whqsy.js
+# ✅ 菜谱大全
+http-response ^https:\/\/api.*\.xiangha\.com script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/caipu.js
+# ✅ 傲软抠图，傲软扫描，傲软PDF转换，傲软PDF编辑，傲软投屏
+http-response ^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn) script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/arqjt.js
+# ✅ 大神水印
+http-response ^https:\/\/dashen.*\.shuiyinyu\.com\/.+\/user\/get_user_info script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/dssy.js
+# ✅ ADGuard
+http-response ^https:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt\/(.*?) script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/AdGuard.js
+# ✅ 夸克网盘
+http-response https?:\/\/drive.*\.quark\.cn\/.+\/clouddrive\/(member.+|distribute\/detail.+|capacity\/growth\/info) script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/kuake.js
+# ✅ PS
+http-response ^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile script-path=https://raw.githubusercontent.com/Uiito/QX/master/Script/Photoshop.js
+# ✅ 知乎Vip
+http-response ^http[s]?:\/\/api\.zhihu\.com\/(people\/self|unlimited\/go\/my_card|sku\/reversion_sku_ext).*$ script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/ZHVIP.js, requires-body=true, timeout=60 ,tag=ZHVIP_5
+http-request http[s]?:\/\/.*zhihu\.(com|cn)\/(appview\/v2\/answer|remix-web\/paid_columns.*manuscript|market\/paid_column|appview\/p|api\/v3\/books|books|market\/paid_magazine).*$ script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/ZHTK.js, timeout=60 ,tag=ZHTK_6
+# ✅ 喜马拉雅Vip
+# http-request ^http[s]?:\/\/((.+ximalaya.+)|(.+xmcdn.+))\/mobile-playpage\/track\/v3\/baseInfo\/ts script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/xmlysvip2.js
+# http-response ^http[s]?:\/\/((.+ximalaya.+)|(.+xmcdn.+)).*\/(playpage\/tabs\/v2|v1\/album\/track\/ts|v1\/album\/price|v2\/homePage|business-vip-presale-mobile-web\/page\/ts|vip\/v1\/recommand|track\/v3\/baseInfo|v1\/module\/data\/dynamic|basicInfo\/dynamic\/ts).*$ script-path=https://raw.githubusercontent.com/WeiRen0/NewFree/main/XMSVIP2.js
+http-request ^http[s]?:\/\/((.+ximalaya.+)|(.+xmcdn.+))\/mobile-playpage\/track\/v3\/baseInfo\/ts script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/XMSSVIP3.js
+http-response ^http[s]?:\/\/((.+ximalaya.+)|(.+xmcdn.+)).*\/(playpage\/tabs\/v2|v1\/album\/track\/ts|v1\/album\/price|v2\/homePage|business-vip-presale-mobile-web\/page\/ts|vip\/v1\/recommand|track\/v3\/baseInfo|v1\/module\/data\/dynamic|basicInfo\/dynamic\/ts).*$ script-path=https://raw.githubusercontent.com/WeiRen0/NewFree/main/XMSSVIP3.js
+# ✅ 樊登Vip
+http-response ^http[s]?:\/\/.+dushu.+(v101|v100|program\/v100)\/(content|play\/duration|index|list|userInfo|vipInfo|info|ceiltip|mainList|getMarketInfoByType|share).*$ script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/FD.js
+http-request ^http[s]?:\/\/.+dushu.+(v101\/content|book\/v100\/info|\/play\/duration|\/v100\/index|lilei-talk-orch\/program\/v100\/info).*$ script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/FDTK.js
+
+
+
+[MITM]
+hostname = spclient.wg.spotify.com, *.kuwo.cn, *.lrts.me, vas.wps.cn, account.wps.cn, restore-access.indream.app, *.caiyunapp.*,*cyapi*, buy.itunes.apple.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, dict.youdao.com, api.revenuecat.com, pan.baidu.com, ap*.intsig.net,  api.m.jd.com, mb3admin.com, *.aliyundrive.com, commerce-api.faceu.mobi, www.xmind.cn, appwk.baidu.com, buy.itunes.apple.com, apiios_dq.xiangha.com, appweb_dq.xiangha.com, *.dicallapp.com, dashen*.shuiyinyu.com, *.aoscdn.com, *.apsapp.cn, mobile-api.adguard.org, drive*.quark.cn, lcs-mobile-cops.adobe.io, 61.243.13.*,58.144.248.*,120.92.107.*,www.zhihu.com,api.zhihu.com,datahub.zhihu.com,sugar.zhihu.com,appcloud.zhihu.com,duga.zhihu.com,web-er.zhihu.com,lens.zhihu.com,103.41.167.237,58.144.248.94,14.204.51.105,103.41.167.236,103.41.167.234,103.41.167.226,103.41.167.235,113.62.116.232,103.41.167.*,113.62.116.232,103*,113.62.116.232,103.41.167.237,103.41.167.226,web-er.zhihu.com,103.41.167.234,www.zhihu.com,zhuanlan.zhihu.com,api.zhihu.com,api.zhihu.com,183.204.14.111,125.77.176*,27.148*,183.204*,122.224*,60.188.72*,120.220*,120.222*,103.41.167.236,150.109.91*,*.zhihu.*,103.41.167.*,www.zhihu.com,api.zhihu.com,datahub.zhihu.com,sugar.zhihu.com,appcloud.zhihu.com,duga.zhihu.com,web-er.zhihu.com,lens.zhihu.com,103.41.167.237,58.144.248.94,14.204.51.105,103.41.167.236,103.41.167.234,103.41.167.226,103.41.167.235,113.62.116.232,103.41.167.*,113.62.116.232, 180.153.*.*,*xima*,*xmcdn*,*.ximalaya.com,*.xmcdn.com,180.153.255.*,180.153.140.*,180.153.250.*,114.80.99.*,114.80.139.237,114.80.161.29,1.62.62.64,51*.com, *dushu*,  

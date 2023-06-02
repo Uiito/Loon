@@ -1,0 +1,55 @@
+#!name = 功能插件
+#!desc = 
+#!openUrl = https://🎈.com
+#!author =
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Loon.png
+
+
+[General]
+# ✅BoxJs
+force-http-engine-hosts = boxjs.com:80, boxjs.net:80
+
+[Rule]
+# ✅插件仓库
+DOMAIN, loon-plugin.vercel.app, PROXY
+DOMAIN, raw.githubusercontent.com, PROXY
+
+# ✅Sub-Store
+DOMAIN, sub-store.vercel.app, PROXY
+DOMAIN, ip-api.com, PROXY
+
+# ✅BoxJs
+DOMAIN, cdn.jsdelivr.net, PROXY
+
+# ✅TF区域限制解除
+DOMAIN, testflight.apple.com, PROXY
+
+
+[Script]
+# ✅插件仓库
+http-request ^https?:\/\/xn--ck8h\.com script-path = https://raw.githubusercontent.com/Loon0x00/Loon-Gallery/master/backend/gallery.js, requires-body = true, timeout = 120, tag = Loon插件仓库
+
+# ✅Sub-Store
+http-request ^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))) script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js, requires-body=true, timeout=120, tag=Sub-Store Core
+http-request https?:\/\/sub\.store script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js, requires-body=true, timeout=120, tag=Sub-Store Simple
+
+# ✅BoxJs
+http-request ^https?:\/\/(.+\.)?boxjs\.(com|net) script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120, tag=BoxJs
+
+# ✅TF区域限制解除
+http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ requires-body=true,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js, tag=TestFlight解锁
+
+# ✅微信链接限制解除
+http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/UnblockURLinWeChat.js, requires-body=true, timeout=60 ,tag=UnblockURLinWeChat_9
+
+# ✅资源转换器
+http-request \/[^/]+\.[^/]+qx$|qx\?(jsc|hnadd|hndel|n|y|x|del|i)= script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RemoteResourceConverter/RewriteQuantumultX.js, requires-body=true, tag = 转写Quantumult X重写
+http-request \/[^/]+\.[^/]+sg$|sg\?(jsc|hnadd|hndel|n|y|x|del|i)= script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RemoteResourceConverter/RewriteSurge.js, requires-body=true, tag = 转写Surge模块
+http-request r_parser.list$|r_parser.list\?.* script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RemoteResourceConverter/Rule_converter.js, requires-body=true, tag = 规则转换
+http-request _script-converter-(stash|surge|loon|shadowrocket)\.js$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/RemoteResourceConverter/JavaScript_converter.js, requires-body=true, tag = 脚本转换
+
+
+
+[MITM]
+hostname = xn--ck8h.com,sub.store,boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net,testflight.apple.com, mp.weixin.qq.com,weixin110.qq.com,security.wechat.com,github.com, raw.githubusercontent.com, gist.githubusercontent.com, gitlab.com
