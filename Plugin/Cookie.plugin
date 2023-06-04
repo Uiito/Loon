@@ -28,7 +28,8 @@ http-request ^https:\/\/music.163.com\/weapi\/user\/level  script-path= https://
 http-request ^https:\/\/auth\.aliyundrive\.com\/v2\/account\/token  script-path= https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn.js
 http-request ^https:\/\/auth\.aliyundrive\.com\/v2\/account\/token  script-path= https://raw.githubusercontent.com/Uiito/QX/master/Task/aliYunPanCheckIn.js
 
-
+# 美团 cookie
+http-request ^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/ script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js
 
 [MITM]
-hostname = passport.iqiyi.com, c.tieba.baidu.com, mobile.ximalaya.com, mobwsa.ximalaya.com, mobilehera.ximalaya.com, mall.meituan.com, music.163.com, auth.aliyundrive.com, 
+hostname = passport.iqiyi.com, c.tieba.baidu.com, mobile.ximalaya.com, mobwsa.ximalaya.com, mobilehera.ximalaya.com, mall.meituan.com, music.163.com, auth.aliyundrive.com, i.meituan.com, 
