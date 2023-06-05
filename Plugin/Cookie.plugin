@@ -44,14 +44,18 @@ http-request ^https?:\/\/maicai\.api\.ddxq\.mobi\/point\/home\?api_version requi
 http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\? script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js
 http-request ^https?:\/\/m.bilibili.com/$ script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js
 
-#腾讯视频 cookie
+#腾讯视频cookie
 http-request ^https?:\/\/iacc\.rec\.qq\.com script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/videoqq.js
 
-#顺丰 cookie
+#顺丰cookie
 http-request ^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
+
+#伊利乳品cookie
+http-request https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js, requires-body=true,
+
 
 
 
 
 [MITM]
-hostname = passport.iqiyi.com, c.tieba.baidu.com, mobile.ximalaya.com, mobwsa.ximalaya.com, mobilehera.ximalaya.com, mall.meituan.com, music.163.com, auth.aliyundrive.com, i.meituan.com, user-api.smzdm.com, apph5.manmanbuy.com, maicai.api.ddxq.mobi,app.bilibili.com, m.bilibili.com, iacc.rec.qq.com, ccsp-egmas.sf-express.com
+hostname = passport.iqiyi.com, c.tieba.baidu.com, mobile.ximalaya.com, mobwsa.ximalaya.com, mobilehera.ximalaya.com, mall.meituan.com, music.163.com, auth.aliyundrive.com, i.meituan.com, user-api.smzdm.com, apph5.manmanbuy.com, maicai.api.ddxq.mobi,app.bilibili.com, m.bilibili.com, iacc.rec.qq.com, ccsp-egmas.sf-express.com, club.yili.com
