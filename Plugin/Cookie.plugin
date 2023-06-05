@@ -51,10 +51,10 @@ http-request ^https?:\/\/iacc\.rec\.qq\.com script-path=https://raw.githubuserco
 http-request ^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
 
 #伊利乳品cookie
-http-request https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
+http-request https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js, requires-body=true
 
 #无忧行cookie
-http-response https:\/\/app\.jegotrip\.com\.cn\/api\/service\/v1\/mission\/sign\/querySign\?token= script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/jegotrip.cookie.js
+http-response https:\/\/app\.jegotrip\.com\.cn\/api\/service\/v1\/mission\/sign\/querySign\?token= script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/jegotrip.cookie.js, requires-body=true
 http-response https:\/\/cdn\.jegotrip\.com\.cn\/static\/missioncenter\/config\.js script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/jegotrip.cookie.js
 
 
