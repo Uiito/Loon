@@ -53,9 +53,14 @@ http-request ^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/u
 #伊利乳品cookie
 http-request https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js, requires-body=true,
 
+#无忧行cookie
+http-response https:\/\/app\.jegotrip\.com\.cn\/api\/service\/v1\/mission\/sign\/querySign\?token=,script-path=jegotrip.cookie.js, requires-body=true
+http-response https:\/\/cdn\.jegotrip\.com\.cn\/static\/missioncenter\/config\.js,script-path=jegotrip.cookie.js
+
+
 
 
 
 
 [MITM]
-hostname = passport.iqiyi.com, c.tieba.baidu.com, mobile.ximalaya.com, mobwsa.ximalaya.com, mobilehera.ximalaya.com, mall.meituan.com, music.163.com, auth.aliyundrive.com, i.meituan.com, user-api.smzdm.com, apph5.manmanbuy.com, maicai.api.ddxq.mobi,app.bilibili.com, m.bilibili.com, iacc.rec.qq.com, ccsp-egmas.sf-express.com, club.yili.com
+hostname = passport.iqiyi.com, c.tieba.baidu.com, mobile.ximalaya.com, mobwsa.ximalaya.com, mobilehera.ximalaya.com, mall.meituan.com, music.163.com, auth.aliyundrive.com, i.meituan.com, user-api.smzdm.com, apph5.manmanbuy.com, maicai.api.ddxq.mobi,app.bilibili.com, m.bilibili.com, iacc.rec.qq.com, ccsp-egmas.sf-express.com, club.yili.com, app.jegotrip.com.cn, cdn.jegotrip.com.cn
