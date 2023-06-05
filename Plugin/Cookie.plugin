@@ -47,11 +47,11 @@ http-request ^https?:\/\/m.bilibili.com/$ script-path=https://raw.githubusercont
 #腾讯视频 cookie
 http-request ^https?:\/\/iacc\.rec\.qq\.com script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/videoqq.js
 
-
-
+#顺丰 cookie
+http-request ^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
 
 
 
 
 [MITM]
-hostname = passport.iqiyi.com, c.tieba.baidu.com, mobile.ximalaya.com, mobwsa.ximalaya.com, mobilehera.ximalaya.com, mall.meituan.com, music.163.com, auth.aliyundrive.com, i.meituan.com, user-api.smzdm.com, apph5.manmanbuy.com, maicai.api.ddxq.mobi,app.bilibili.com, m.bilibili.com, iacc.rec.qq.com,
+hostname = passport.iqiyi.com, c.tieba.baidu.com, mobile.ximalaya.com, mobwsa.ximalaya.com, mobilehera.ximalaya.com, mall.meituan.com, music.163.com, auth.aliyundrive.com, i.meituan.com, user-api.smzdm.com, apph5.manmanbuy.com, maicai.api.ddxq.mobi,app.bilibili.com, m.bilibili.com, iacc.rec.qq.com, ccsp-egmas.sf-express.com
